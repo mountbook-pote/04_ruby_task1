@@ -21,7 +21,7 @@ elsif memo_type == 2
   puts "以上が読み込んだファイルの内容です。"
   puts "以下、読み込んだファイルを編集してください"
   puts "完了したらCtrl+Dを押します"
-    CSV.open("#{file_name}.csv", "w") do |f|
+    CSV.open("#{file_name}.csv", "a") do |f|
       f << readlines(chomp: true)
     end
 else
